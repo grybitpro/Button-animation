@@ -1,0 +1,64 @@
+/*The HTML Structure */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart Button</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <button class="button single_add_to_cart_button">
+        <span class="text fadeInDown">Add to Cart</span>
+    </button>
+</body>
+</html>
+
+/*The CSS Magic */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.button.single_add_to_cart_button {
+    display: inline-block;
+    background-color: #3498db; /* Set your background color */
+    color: #fff; /* Set your text color */
+    border: none;
+    padding: 15px 25px; /* Adjust padding as needed */
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: shake 4s infinite;
+}
+
+.button.single_add_to_cart_button:before {
+    content: "\f217"; /* Custom icon from Font Awesome */
+    font-family: 'Font Awesome 5 Free'; /* Update with your actual font family */
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.text {
+    display: inline-block;
+    font-size: 1.2em;
+    vertical-align: middle;
+    -webkit-animation-duration: 1s;
+    animation-duration: 0.5s;
+}
+
+.fadeInDown.text {
+    -webkit-animation-duration: 1s;
+    animation-duration: 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0) rotate(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(-3px, 0px) rotate(-1deg); }
+    20%, 40%, 60%, 80% { transform: translate(3px, 2px) rotate(0deg); }
+}
